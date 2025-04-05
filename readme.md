@@ -2,7 +2,7 @@
 
 ## Overview
 
-Predicts loan approval likelihood using a [Specify Model, e.g., Logistic Regression] model trained on historical data. Assists financial institutions in decision-making via user input and approval/rejection prediction.
+Predicts loan approval likelihood using a model trained on historical data. Assists financial institutions in decision-making via user input and approval/rejection prediction.
 
 ## Features
 
