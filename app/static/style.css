@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url("bg.jpg"); /* Path to your background image in the static folder */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center center; /* Centers the image in the viewport */
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+    height: 100vh; /* Makes the body take up the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    font-weight: bold; /* Makes all the text inside the container bold */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #4f4b4b;
+    font-size: 28px;
+}
+
+.form-group { /* Container for each question */
+    margin-bottom: 15px;
+    display: flex; /* Arrange label and options horizontally */
+    align-items: center; /* Vertically align label and options */
+}
+
+.form-group label {
+    flex-shrink: 0; /* Prevent label from shrinking */
+    width: 120px; /* Adjust width as needed for your labels */
+    margin-right: 10px; /* Space between label and options */
+    text-align: left;
+}
+
+.radio-options { /* Container for the radio button options */
+    display: flex; /* Arrange radio items horizontally */
+    align-items: center; /* Vertically align radio and label */
+}
+
+.radio-item { /* Container for each individual radio button and label */
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between radio options */
+}
+
+.radio-item input[type="radio"] {
+    margin-right: 5px; /* Space between radio button and label */
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s ease;
+    font-weight: bold; /* Makes the text in the input fields bold */
+}
+
+form input:focus {
+    border-color: #000000;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+    font-weight: bold; /* Makes the button text bold */
+}
+
+button:hover {
+    background-color: #1e3c72;
+}
+
+.result {
+    margin-bottom: 20px;
+    background-color: #000000;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    border: 2px solid #fff; /* Makes the border tiny and bold */
+}

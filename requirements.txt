@@ -1,0 +1,9 @@
+flask
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+mlxtend
+imbalanced-learn
+joblib

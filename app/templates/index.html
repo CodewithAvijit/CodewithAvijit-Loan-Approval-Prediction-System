@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% if prediction %}
+            <div class="result">{{ prediction }}</div>
+        {% endif %}
+
+        <h2>Loan Status Prediction</h2>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label>Education</label>
+                <div class="radio-group">
+                    <input type="radio" id="graduate" name="education" value="graduate" required>
+                    <label for="graduate">Graduate</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="notgraduate" name="education" value="notgraduate" required>
+                    <label for="notgraduate">Not Graduate</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Self Employed</label>
+                <div class="radio-group">
+                    <input type="radio" id="yes" name="selfemployment" value="yes" required>
+                    <label for="yes">Yes</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="no" name="selfemployment" value="no" required>
+                    <label for="no">No</label>
+                </div>
+            </div>
+
+            <input type="number" name="income" placeholder="Annual Income" required>
+            <input type="number" name="loan" placeholder="Loan Amount" required>
+            <input type="number" name="civil_score" placeholder="Civil Score" required>
+            <input type="number" name="residential_assets_value" placeholder="Residential Assets Value" required>
+            <input type="number" name="commercial_assets_value" placeholder="Commercial Assets Value" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
